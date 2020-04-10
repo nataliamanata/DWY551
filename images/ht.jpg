@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta chatset="utf-8">
+<meta name="viewport" content="width=device-width" , initial-scale="1.0" , maximum-scale="1.0" , user-scalable="1.0">
+<meta http-equiv="title" content="Entendiendo el tag audio de HTML 5" />
+<meta http-equiv="keywords" content="articulos." />
+<meta http-equiv="description" content="Introducido en HTML, el tag &lt;audio&gt; cumple la funciÛn de definir un sonido y se utiliza mayormente para insertar contenido sonoro como m˙sica o podcasts en documentos HTML. Actualmente es soportado por todos los navegadores modernos. No pasa as" />
+<meta http-equiv="DC.Description" content="Introducido en HTML, el tag &lt;audio&gt; cumple la funciÛn de definir un sonido y se utiliza mayormente para insertar contenido sonoro como m˙sica o podcasts en documentos HTML. Actualmente es soportado por todos los navegadores modernos. No pasa as" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta name="title" content="Entendiendo el tag audio de HTML 5" />
+<meta name="DC.Title" content="Entendiendo el tag audio de HTML 5" />
+<meta name="author" content="Programacion en Castellano, S.L." />
+<link rel="canonical" href="https://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155" />
+<link rel="icon" href="/templates/default/imgs/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/templates/default/imgs/favicon.ico" type="image/x-icon" />
+<meta property="og:title" content="Entendiendo el tag audio de HTML 5" />
+<meta property="og:image" content="https://programacion.net/files/article/article_02155_.jpg" />
+<meta property="og:site_name" content="Programaci&oacute;n en Castellano." />
+<meta property="og:description" content="Introducido en HTML, el tag &lt;audio&gt; cumple la funciÛn de definir un sonido y se utiliza mayormente para insertar contenido sonoro como m˙sica o podcasts en documentos HTML. Actualmente es soportado por todos los navegadores modernos. No pasa as" />
+<meta property="og:url" content="http://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155" />
+<meta name="DC.Creator" content="Programacion en Castellano, S.L." />
+<meta name="VW96.objecttype" content="Document" />
+<meta name="DC.Language" content="Spanish" />
+<meta name="distribution" content="global" />
+<meta name="resource-type" content="document" />
+<meta name="Revisit" content="1 days" />
+<meta name="encoding" content="ISO-8859-1" />
+<meta name="verify-v1" content="h4J2cgDnMSuO/sumshZPfJUHkjw7eum37PsqAjQgNyw=" />
+<title>Entendiendo el tag audio de HTML 5. Programaci&oacute;n en Castellano.</title>
+<link rel="stylesheet" type="text/css" href="/templates/default/js/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/templates/default/js/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<link rel="stylesheet" type="text/css" href="/templates/default/css/global.css">
+<link rel="stylesheet" type="text/css" href="/templates/default/css/global2.css">
+<link rel="stylesheet" type="text/css" href="/templates/default/css/programacionnet_calendar_skin.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/templates/default/css/font-awesome.min.css">
+<script src='https://www.google.com/recaptcha/api.js' type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script src="/templates/default/js/jquery/jquery-1.11.3.min.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script src="/templates/default/js/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<link href="/templates/default/css/prettify.css" type="text/css" rel="stylesheet" />
+<script type="bfc105424b6e3333c75b3419-text/javascript" src="/templates/default/js/prettify.js"></script>
+<script src="/templates/default/js/bootstrap/js/bootstrap.min.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script src="/templates/default/js/bootstrap/ie10/ie10-viewport-bug-workaround.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script src="/templates/default/js/calendar.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script src="/templates/default/js/Base64.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script src="/templates/default/js/funciones.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script type="bfc105424b6e3333c75b3419-text/javascript" src="/templates/default/js/tinymce7/tinymce.min.js"></script>
+<script src="/templates/default/js/jobs_searcher.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+	
+	$(document).ready(function(){
+	    $('[data-toggle="tooltip"]').tooltip();
+	});
+	
+	</script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f1d600"
+          }
+        },
+        "content": {
+          "message": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el an&aacute;lisis de sus h&aacute;bitos de navegaci&oacute;n. Si contin&uacute;a navegando, consideramos que acepta su uso. Puede cambiar la configuraci&oacute;n u obtener m&aacute;s informaci&oacute;n",
+          "dismiss": "Adelante",
+          "link": "M&aacute;s info",
+          "href": "https://colorvivo.com/privacidad-cookies/"
+        }
+      })});
+  </script>
+<script src="//load.sumome.com/" data-sumo-site-id="f1a0c9d6780c65655702f42ed8788010b793ac34a4fe615d2c85fc2e4ecea9e4" async="async" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+</head>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="bfc105424b6e3333c75b3419-|49"></script><body onload="prettyPrint();init('codetext');">
+<div id="content" class="container-fluid">
+<div class="row">
+<div class="col-md-12" style="padding:0px;margin:0px;">
+<!DOCTYPE html>
+<header>
+<nav id="top">
+<div class="container">
+<div class="row">
+<div class="col-md-3 text-center">
+<a href="/"><img src="/templates/default/imgs/logo.png" alt="Programacion.net" title="Programacion.net" class="logo"></a>
+</div>
+ <div>
+<div class="col-md-5 col-md-offset-4 text-center hidden-xs hidden-sm">
+<div class="login-vertical">
+<span class="glyphicon glyphicon-user"><a></span><a href="/login">Con&eacute;ctate</a> o <a href="/registro">Reg&iacute;strate</a>
+</div>
+</div>
+<div class="col-md-3 col-md-offset-7 text-center hidden-md hidden-lg">
+<div class="panel-group" role="tablist">
+<div class="panel panel-default">
+<div class="login-vertical login-vertical-collapsed">
+<span class="glyphicon glyphicon-user"><a></span><a href="/login">Con&eacute;ctate</a> o <a href="/registro">Reg&iacute;strate</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<nav id="center" class="navbar navbar-static-top" style="z-index:2">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li id="menu-inicio"><a href="/">Inicio</a></li>
+<li id="menu-articulos">
+<a href="/articulos">
+Art&iacute;culos
+</a>
+<div id="submenu-articulos" class="dropdown-menu hidden-xs submenu">
+<div class="submenu-section submenu-right-separator">
+<span class="submenu-category-title ">PROGRAMACI&Oacute;N GENERAL</span>
+<ul class="list-unstyled">
+<li><a href="/articulos/c">C / C++ / C#</a></li>
+<li><a href="/articulos/java">Java</a></li>
+<li><a href="/articulos/visualbasic">Visual Basic</a></li>
+<li><a href="/articulos/objectivec">Objective-C</a></li>
+<li><a href="/articulos/python">Python</a></li>
+<li><a href="/articulos/perl">Perl</a></li>
+<li><a href="/articulos/ruby">Ruby</a></li>
+<li><a href="/articulos/delphi">Delphi</a></li>
+</ul>
+</div>
+<div class="submenu-section submenu-right-separator">
+<span class="submenu-category-title">PROGRAMACI&Oacute;N WEB</span>
+<ul>
+<li><a href="/articulos/asp">ASP</a></li>
+<li><a href="/articulos/php">PHP</a></li>
+<li><a href="/articulos/html">HTML</a></li>
+<li><a href="/articulos/css">CSS</a></li>
+<li><a href="/articulos/javascript">Javascript</a></li>
+<li><a href="/articulos/serviciosweb">Aplicaciones prefabricadas</a></li>
+</ul>
+</div>
+<div class="submenu-section submenu-right-separator">
+<span class="submenu-category-title">BASES DE DATOS</span>
+<ul>
+<li><a href="/articulos/sql">SQL</a></li>
+<li><a href="/articulos/mongodb">Mongo DB</a></li>
+<li><a href="/articulos/bdoracle">Oracle</a></li>
+<li><a href="/articulos/idmysql">MySQL</a></li>
+<li><a href="/articulos/sqlserver">SQL Server</a></li>
+</ul>
+</div>
+<div class="submenu-section">
+<span class="submenu-category-title">PROGRAMACI&Oacute;N APPs</span>
+<ul>
+<li><a href="/articulos/android">Android</a></li>
+<li><a href="/articulos/ios">iOS</a></li>
+<li><a href="/articulos/windowsphone">WindowsPhone</a></li>
+<li><a href="/articulos/blackberry">BlackBerry</a></li>
+</ul>
+</div>
+</div>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+						
+							$(function(){
+						    $("#menu-articulos").hover(            
+						            function() {
+						                $('#submenu-articulos', this).stop( true, true ).fadeIn("fast");
+						            },
+						            function() {
+						                $('#submenu-articulos', this).stop( true, true ).fadeOut("fast");
+						            });
+						    });
+						
+						</script>
+ </li>
+<li id="menu-tutoriales">
+<a href="/codigos" class="dropdown-toggle">
+Tutoriales
+<span class="sr-only">(current)</span>
+</a>
+<div id="submenu-tutoriales" class="dropdown-menu hidden-xs submenu">
+<div class="submenu-section submenu-right-separator">
+<span class="submenu-category-title ">PROGRAMACI&Oacute;N GENERAL</span>
+<ul class="list-unstyled">
+<li><a href="/codigos/c">C / C++ / C#</a></li>
+<li><a href="/codigos/java">Java</a></li>
+<li><a href="/codigos/visualbasic">Visual Basic</a></li>
+<li><a href="/codigos/objectivec">Objective-C</a></li>
+<li><a href="/codigos/python">Python</a></li>
+<li><a href="/codigos/perl">Perl</a></li>
+<li><a href="/codigos/ruby">Ruby</a></li>
+<li><a href="/codigos/delphi">Delphi</a></li>
+</ul>
+</div>
+<div class="submenu-section submenu-right-separator">
+<span class="submenu-category-title">PROGRAMACI&Oacute;N WEB</span>
+<ul>
+<li><a href="/codigos/asp">ASP</a></li>
+<li><a href="/codigos/php">PHP</a></li>
+<li><a href="/codigos/html">HTML</a></li>
+<li><a href="/codigos/css">CSS</a></li>
+<li><a href="/codigos/javascript">Javascript</a></li>
+<li><a href="/codigos/serviciosweb">Aplicaciones prefabricadas</a></li>
+</ul>
+</div>
+<div class="submenu-section submenu-right-separator">
+<span class="submenu-category-title">BASES DE DATOS</span>
+<ul>
+<li><a href="/codigos/sql">SQL</a></li>
+<li><a href="/codigos/mongodb">Mongo DB</a></li>
+<li><a href="/codigos/bdoracle">Oracle</a></li>
+<li><a href="/codigos/idmysql">MySQL</a></li>
+<li><a href="/codigos/sqlserver">SQL Server</a></li>
+</ul>
+</div>
+<div class="submenu-section">
+<span class="submenu-category-title">PROGRAMACI&Oacute;N APPs</span>
+<ul>
+<li><a href="/codigos/android">Android</a></li>
+<li><a href="/codigos/ios">iOS</a></li>
+<li><a href="/codigos/windowsphone">WindowsPhone</a></li>
+<li><a href="/codigos/blackberry">BlackBerry</a></li>
+</ul>
+</div>
+</div>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+						
+							$(function(){
+						    $("#menu-tutoriales").hover(            
+						            function() {
+						                $('#submenu-tutoriales', this).stop( true, true ).fadeIn("fast");
+						            },
+						            function() {
+						                $('#submenu-tutoriales', this).stop( true, true ).fadeOut("fast");
+						            });
+						    });
+						
+						</script>
+</li>
+<li id="menu-noticias"><a href="/noticias">Noticias</a></li>
+<li id="menu-foros"><a href="/foros">Foros</a></li>
+<li id="menu-eventos"><a href="/eventos">Eventos</a></li>
+<li id="menu-empleo"><a href="/empleo">Empleo</a></li>
+</ul>
+<form action="https://programacion.net/buscar/" class="navbar-form navbar-right" id="cse-search-box">
+<div>
+<input type="hidden" name="cx" value="partner-pub-2841178153102000:6309713372" />
+<input type="hidden" name="cof" value="FORID:10" />
+<input type="hidden" name="ie" value="UTF-8" />
+<input type="text" name="q" size="20" style="border:0px;" />
+<input type="submit" name="sa" value="Buscar" />
+</div>
+</form>
+<script type="bfc105424b6e3333c75b3419-text/javascript" src="https://www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
+</div>
+</div>
+</nav>
+<nav id="bottom">
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-left">
+<ol itemscope itemtype="https://schema.org/BreadcrumbList" style="margin-left: -40px;">
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="list-style: none; display: inline">
+<a itemprop="item" href="/" class="btn btn-default btn-md" style="padding-left:0px;padding-right:0px;">
+<span class="glyphicon glyphicon-home">
+<span class="icon-text" itemprop="name" style="margin-left: -3px;">Inicio</span>
+<meta itemprop="position" content="1" />
+</span>
+</a>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="list-style: none; display: inline">
+<a itemprop="item" href="/articulos" class="btn btn-default btn-md" style="padding-left:0px;padding-right:0px;">
+<span class="glyphicon glyphicon-chevron-right">
+<span class="icon-text" itemprop="name" style="margin-left: -3px;">Art&iacute;culos</span>
+<meta itemprop="position" content="2" />
+</span>
+</a>
+</li>
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" style="list-style: none; display: inline">
+<a itemprop="item" href="/articulo/entendiendo_el_tag_audio_de_html_5_2155" class="btn btn-default btn-md" style="padding-left:0px;padding-right:0px;">
+<span class="glyphicon glyphicon-chevron-right">
+<span class="icon-text" itemprop="name" style="margin-left: -3px;">Entendiendo el tag audio de HTML 5</span>
+<meta itemprop="position" content="3" />
+</span>
+</a>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</nav>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+
+		// AQU√ç SE RESALTA LA SECCI√ìN DONDE NOS ENCONTRAMOS
+				var menu_item = "#menu-articulos";
+		
+		
+		$(menu_item).addClass('active');
+		
+		// Cuando pulsamos un elemento debe esconderse la barra de navegaci√≥n
+		$('.nav a').on('click', function(){
+			if ($(".navbar-toggle").is(":visible")) {
+				$(".btn-navbar").click(); //bootstrap 2.x
+		    	$(".navbar-toggle").click() //bootstrap 3.x by Richard
+			};		    
+		});
+		
+	</script>
+</header>
+
+<div id="popup-conexion" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Con&eacute;ctate a Programacion.net</h4>
+</div>
+<div class="modal-body">
+<form action="" method="POST" name="login">
+<input type="text" name="email_login" id="email_login" placeholder="E-mail" class="form-control">
+<input type="password" name="pass" id="pass" placeholder="Contrase&ntilde;a" class="form-control">
+<button class="article-view-new-comment-btn" type="submit">Conectarme a Programacion.net</button>
+</form>
+</div>
+<div class="modal-footer">
+<a href="/olvide_mi_contrasena">&iquest;Olvidaste tu contrase&ntilde;a?</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 text-center" style="padding-left:0px;">
+<div class="container">
+<div class="col-md-9" style="padding-left:0px;">
+<div class="article-view-container" style="margin-top:15px;">
+<div class="article-view-header" style="height:100%;width:100%;">
+<div class="article-view-header-content col-md-9 col-xs-12 col-sm-12" style="padding-left:0px;">
+<h1 class="article-view-title">Entendiendo el tag audio de HTML 5</h1>
+
+</div>
+<div class="col-md-6 col-xs-6 col-sm-6" style="text-align:left;"></div>
+<div class="col-md-6 col-xs-6 col-sm-6" style="text-align:right;"></div>
+
+</div>
+<div class="banner-superior" style="text-align:center;float:left;width:100%;">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183" data-ad-slot="9441797648" data-ad-format="link"></ins>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183" data-ad-slot="2058131648" data-ad-format="auto"></ins>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+<div class="article-view-body">
+<div class="article-view-body-image"><img src="/files/article/article_02155_.jpg" width="100%" style="margin-bottom:15px;"></div>
+<div class="article-view-body-text">
+<p>Introducido en HTML, el tag &lt;audio&gt; cumple la funciÛn de definir un sonido y se utiliza mayormente para insertar contenido sonoro como m˙sica o podcasts en documentos HTML. Actualmente es soportado por todos los navegadores modernos. No pasa asÌ con Internet Explorer 8 y sus versiones anteriores.
+</p><p>El tag &lt;audio&gt; puede utilizarse para reproducir archivos de audio en los siguientes formatos:
+<ul>
+<li>mp3: Soportado por todos los navegadores modernos</li>
+<li>wav: No soportado por Internet Explorer</li>
+<li>ogg: No soportado ni por Internet Explorer ni por Safari</li>
+</ul>
+<h3>CÛmo utilizar el tag &lt;audio&gt; para insertar un fichero de audio en tu sitio web</h3>
+</p>
+<center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-9314112849612183" data-ad-slot="6069528845"></ins>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<p>Este es sin duda el uso m·s b·sico del tag &lt;audio&gt;. En este ejemplo lo primero que tenemos que hacer es subir el fichero mp3 que quieres reproducir al directorio que desees de tu servidor.
+</p><p>Date cuenta de que utilizamos el atributo autoplay para que el fichero se reproduzca autom·ticamente. Dicho esto, se debe evitar reproducir sonidos autom·ticamente en una p·gina web, ya que es extremadamente molesto para los visitantes, ya que no tendr·n forma de detener la reproducciÛn del audio.
+<pre class="prettyprint lang-">&lt;audio src="sound.mp3" autoplay&gt;&lt;/audio&gt;</pre>
+<h3>Reproducir en bucle un archivo de sonido</h3>
+</p><p>Si quieres reproducir un archivo de sonido una y otra y otra vez, puedes agregar el atributo loop en tu elemento audio:
+<pre class="prettyprint lang-">&lt;audio src="sound.mp3" autoplay loop&gt;&lt;/audio&gt;</pre>
+<h3>Mostrar los controles del navegador</h3>
+</p><p>En lugar de que se reproduzca autom·ticamente, puedes hacer que el navegador muestre unos controles para que el usuario pueda gestionar la reproducciÛn del sonido. Hablamos de controles como el volumen, play/pausa, etc...
+</p><p>Esto se puede hacer de forma sencilla simplemente aÒadiendo el atributo controls al tag:
+<pre class="prettyprint lang-">&lt;audio src="sound.mp3" controls&gt;&lt;/audio&gt;</pre>
+<h3>M˙ltiples formatos de fichero</h3>
+</p><p>El tag &lt;audio&gt; te permite definir diferentes formatos para un mismo archivo de sonido. Esto es especialmente ˙til si quieres reproducir un fichero en formato .ogg, el cual como hemos visto antes no es soportado ni por Internet Explorer, ni por Safari.
+<pre class="prettyprint lang-">&lt;audio controls&gt;
+  &lt;source src="sound.ogg"&gt;
+  &lt;source src="sound.mp3"&gt;
+&lt;/audio&gt;</pre>
+<h3>Definir MIME Types</h3>
+</p><p>Cuando utilizamos diferentes formatos de audio, es muy buena idea especificar el MIME type de cada fichero para ayudar al navegador a localizar el fichero que soporta. Esto se puede hacer facilmente utilizando el atributo type en el elemento source.
+<pre class="prettyprint lang-">&lt;audio controls&gt;
+  &lt;source src="sound.ogg" type="audio/ogg" &gt;
+  &lt;source src="sound.mp3" type="audio/mp3" &gt;
+&lt;/audio&gt;</pre>
+<h3>øQuÈ hacemos con los navegadores antiguos?</h3>
+</p><p>Todos los navegadores modernos soportan el tag &lt;audio&gt;. Sin embargo, es posible avisar a los usuarios que utilizan navegadores antiguos que el tag &lt;audio&gt; no es compatible con su navegador.<br /><br />Como puedes ver a continuaciÛn, solo tienes que insertar el mensaje que quieras dentro de la etiqueta &lt;audio&gt;. Si el navegador del usuario no admite dicho tag, se mostrar· el mensaje en lugar del reproductor de audio.
+<pre class="prettyprint lang-">&lt;audio controls&gt;
+  &lt;source src="sound.ogg" type="audio/ogg" &gt;
+  &lt;source src="sound.mp3" type="audio/mp3" &gt;
+  Tu navegador no soporta el tag audio
+&lt;/audio&gt;</pre>
+<h3>Precargar ficheros</h3>
+</p><p>Cuando reproducimos archivos grandes, lo ideal es almacenar esos archivos en el b˙fer para que el usuario no tenga que esperar y esperar para reproducir dicho audio y lo escuche fluidamente.<br /><br />øCÛmo hacer esto? Pues con el atributo preload. Este atributo acepta 3 valores: none (si no deseas que el archivo se guarde en el b˙fer), auto (si deseas que el navegador almacene el archivo en el b˙fer) y metadata (para almacenar solo los metadatos cuando se carga la p·gina).
+<pre class="prettyprint lang-">&lt;audio controls&gt;
+  &lt;source src="sound.mp3" preload="auto" &gt;
+&lt;/audio&gt;</pre>
+<h3>Controlar el reproductor con Javascript</h3>
+</p><p>Controlar la reproducciÛn del audio con Javascript es muy sencillo. En el siguiente ejemplo muestro cÛmo construir un rudimentario reproductor de audio con controles basiquitos (Play, Pausa, Volumen +, Volumen -) utilizando HTML y Javascript.
+<pre class="prettyprint lang-">&lt;audio id="player" src="sound.mp3"&gt;&lt;/audio&gt;
+&lt;div&gt;
+	&lt;button onclick="document.getElementById('player').play()"&gt;Play&lt;/button&gt;
+	&lt;button onclick="document.getElementById('player').pause()"&gt;Pausa&lt;/button&gt;
+	&lt;button onclick="document.getElementById('player').volume+=0.1"&gt;Volumen +&lt;/button&gt;
+	&lt;button onclick="document.getElementById('player').volume-=0.1"&gt;Volumen -&lt;/button&gt;
+&lt;/div&gt; </pre>
+<h3>Personalizando el tag &lt;audio&gt; con CSS</h3>
+</p><p>Actualmente, las opciones que tenemos para personalizar el tag de audio son algo limitadas. Las propiedades de CSS que podemos utilizar son: width, box-shadow, border-radius y transform.
+<pre class="prettyprint lang-">audio { 
+  width: 600px; 
+  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+  border-radius: 90px;
+  transform: scale(1.05);
+}</pre></p>
+</div>
+
+<div class="banner-inferior">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183" data-ad-slot="7127459642" data-ad-format="auto"></ins>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="col-md-12 col-xs-12 col-sm-12" style="text-align:left;padding-left:0px;padding-top:20px;padding-bottom:20px;">
+<strong>COMPARTE ESTE ART&Iacute;CULO</strong><br><br>
+<div class="col-md-3 col-xs-12 col-sm-6 btn-send" data-toggle="modal" data-target="#send-friend">
+<i class="fa fa-envelope-o"></i> ENVIAR A UN AMIGO
+</div>
+<div class="col-md-3 col-xs-12 col-sm-6 btn-facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/share.php?u=http://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155&t=Entendiendo el tag audio de HTML 5','window', 'width=800,height=500');" data-cf-modified-bfc105424b6e3333c75b3419-="">
+<i class="fa fa-facebook"></i> COMPARTIR EN FACEBOOK
+</div>
+<div class="col-md-3 col-xs-12 col-sm-6 btn-twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/intent/tweet?source=webclient&text=Entendiendo+el+tag+audio+de+HTML+5 http://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155 via @noprog','window', 'width=800,height=500');" data-cf-modified-bfc105424b6e3333c75b3419-="">
+<i class="fa fa-twitter"></i> COMPARTIR EN TWITTER
+</div>
+<div class="col-md-3 col-xs-12 col-sm-6 btn-google" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('https://plus.google.com/share?url=http://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155','window', 'width=800,height=500');" data-cf-modified-bfc105424b6e3333c75b3419-="">
+<i class="fa fa-google-plus"></i> COMPARTIR EN GOOGLE +
+</div>
+</div>
+<div class="col-md-6 col-xs-6 col-sm-6" style="text-align:left;padding-left:0px;padding-top:20px;padding-bottom:20px;">
+<strong>ART&Iacute;CULO ANTERIOR</strong><br><br>
+<a href="/articulo/como_convertir_html_en_un_documento_ms_word_mediante_php_2153" rel="prev">CÛmo convertir HTML en un documento MS Word mediante PHP</a>
+</div>
+<div class="col-md-6 col-xs-6 col-sm-6" style="text-align:right;padding-right:0px;padding-top:20px;padding-bottom:20px;">
+<strong>SIGUIENTE ART&Iacute;CULO</strong><br><br>
+<a href="/articulo/blogs_de_programacion_a_los_que_seguirles_la_pista_para_mejorar_tus_habilidades_2156" rel="next">Blogs de programaciÛn a los que seguirles la pista para mejorar tus habilidades</a>
+</div>
+</div>
+<div class="banner-inferior">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9314112849612183" data-ad-slot="1080926046" data-ad-format="auto"></ins>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+</div>
+<div class="article-view-footer">
+&iexcl;S&Eacute; EL PRIMERO EN COMENTAR!
+<div class="article-view-new-comment-unlogged">
+<a href="/login">Con&eacute;ctate</a> o <a href="/registro">Reg&iacute;strate</a> para dejar tu comentario.
+</div>
+</div>
+</div>
+
+<div id="send-friend" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<h4 class="modal-title">Enviar a un amigo</h4>
+</div>
+<div class="modal-body">
+<form action="" method="POST" name="login">
+<input type="text" name="email_friend" id="email_friend" placeholder="E-mail de tu amigo" class="form-control">
+<button class="article-view-new-comment-btn" type="submit">Enviar a un amigo</button>
+</form>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 text-left hidden-xs hidden-sm">
+
+<div id="fb-root"></div>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+	
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.4";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	
+</script>
+
+<aside>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<a href="/foros">
+<img src="/templates/default/imgs/foro.png" alt="Foro" class="forum-banner">
+</a>
+</div>
+</div>
+<div class="row">
+<center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="bfc105424b6e3333c75b3419-text/javascript"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2841178153102000" data-ad-slot="1381974578" data-ad-format="link"></ins>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+</center>
+</div>
+<div class="row">
+<div class="col-md-12">
+<button type="button" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = '/enviar_articulo';" class="article-view-new-comment-btn" style="width:100%;background-color:#D60047" name="enviar" data-cf-modified-bfc105424b6e3333c75b3419-="">Publicar art&iacute;culo</button>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class="social-title">NUESTRAS REDES</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<a href="https://www.facebook.com/programacionencastellano" target="_blank">
+<img src="/templates/default/imgs/facebook-square.png" alt="Facebook" class="social-icon">
+</a>
+<a href="https://twitter.com/noprog" target="_blank">
+<img src="/templates/default/imgs/twitter-square.png" alt="Twitter" class="social-icon">
+</a>
+<a href="https://plus.google.com/112941540708461191492/about?gl=es&hl=es" target="_blank">
+<img src="/templates/default/imgs/googleplus-square.png" alt="GooglePlus" class="social-icon">
+</a>
+<a href="/feeds_rss/rssarticle.xml" target="_blank">
+<img src="/templates/default/imgs/rss-square.png" alt="RSS" class="social-icon">
+</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class="social-title">&iquest;TE HA GUSTADO? IND&iacute;CANOSLO</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="fb-page" data-href="https://facebook.com/programacionencastellano" data-width="240" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class="social-title">Webs Amigas</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<ul>
+<li><a href="https://slidesmedia.com" target="_blank">Free Presentations</a></li>
+<li><a href="https://face.co/indexes.html" target="_blank">Crear tu avatar online</a></li>
+<li><a href="https://redes-sociales.com" target="_blank">Noticias Redes Sociales</a></li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<div class="blank"></div>
+<div class="row">
+<div id="footer" class="col-md-12" style="padding:0px;margin:0px;">
+<footer style="margin-top:12px;">
+<span id="top-link-block" class="hidden">
+<a href="#top" class="well well-sm" onclick="if (!window.__cfRLUnblockHandlers) return false; $('html,body').animate({scrollTop:0},'slow');return false;" data-cf-modified-bfc105424b6e3333c75b3419-="">
+<i class="glyphicon glyphicon-chevron-up"></i>
+</a>
+</span>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div style="padding-left:5%;padding-right:5%;margin-top:15px;">
+<div class="col-md-3">
+<div class="divheader-footer">
+<span class="header-footer">Secciones</span>
+</div>
+<li class="footer-link"><a href="/articulos">Art&iacute;culos</a></li>
+<li class="footer-link"><a href="/codigos">Tutoriales y c&oacute;digo fuente</a></li>
+<li class="footer-link"><a href="/foros">Foros</a></li>
+<li class="footer-link"><a href="/eventos">Eventos</a></li>
+<li class="footer-link"><a href="/empleo">Empleo</a></li>
+</div>
+<div class="col-md-3">
+<div class="divheader-footer">
+<span class="header-footer">Lenguajes Destacados</span>
+</div>
+<li class="footer-link"><a href="/php">PHP</a></li>
+<li class="footer-link"><a href="/java">Java</a></li>
+<li class="footer-link"><a href="/asp">ASP</a></li>
+<li class="footer-link"><a href="/bases-de-datos">Bases de datos</a></li>
+<li class="footer-link"><a href="/c">C</a></li>
+</div>
+<div class="col-md-3">
+<div class="divheader-footer">
+<span class="header-footer">Informaci&oacute;n</span>
+</div>
+<li class="footer-link"><a href="/datos_legales">Datos Legales</a></li>
+<li class="footer-link"><a href="/politica_de_privacidad">Pol&iacute;tica de privacidad</a></li>
+<li class="footer-link"><a href="/publicidad">Publicidad</a></li>
+</div>
+<div class="col-md-3">
+<div class="divheader-footer">
+<span class="header-footer">Contacto</span>
+</div>
+<li class="footer-link"><a href="/contacto">Contacte con nosotros</a></li>
+<li class="footer-link"><a href="/publicidad">Publicidad</a></li>
+<li class="footer-link"><a href="https://www.facebook.com/programacionencastellano" target="_blank">
+<img src="/templates/default/imgs/facebook-square.png" alt="Facebook" class="social-icon" style="margin:0px;margin-right:5px;margin-top:10px;">
+</a>
+<a href="https://twitter.com/noprog" target="_blank">
+<img src="/templates/default/imgs/twitter-square.png" alt="Twitter" class="social-icon" style="margin:0px;margin-right:5px;margin-top:10px;">
+</a></li>
+</div>
+</div>
+<div class="col-md-12 text-center pie">
+<a href="https://colorvivo.com" target="_blank">Dise&ntilde;o web y desarrollo web</a>. Un proyecto de los <a href="https://carrero.es" target="_blank">hermanos Carrero</a>. <br /><br /><strong>Alojado en</strong> <a href="https://www.stackscale.com/es/" target="_blank">cloud privado Stackscale</a><br>
+<strong>M&aacute;s internet</strong>: <a href="https://password.es" target="_blank">Password</a> | <a href="https://getfavicon.com" target="_blank">Crear tu Favicon</a> | <a href="https://conideade.com" target="_blank">material para manualidades</a>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class="footer-text">Copyright &copy; 1998-2020 Programaci&oacute;n en Castellano. Todos los derechos reservados</p>
+</div>
+</div>
+<div class="row">
+
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+<style>
+      
+      html{height: 100%;}
+      body{height: 100%;}
+      
+    </style>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+      
+      // Ocultar el boton back-to-top
+      $(window).scroll(function()
+      {
+        if ($(window).scrollTop() && 
+            !($(window).height() + $(window).scrollTop() > $('#footer').position().top))
+        {
+          if($('#top-link-block').hasClass("hidden"))
+          {
+            $('#top-link-block').removeClass("hidden");
+          }
+          $('#top-link-block:hidden').stop(true, true).fadeIn();
+        }
+        else
+        {
+          $('#top-link-block').stop(true, true).fadeOut();
+        }               
+      });
+
+      // Sticky Footer
+      $(window).load(function()
+      {
+        $(window).resize(function()
+        {
+          $('.blank').height(0);
+          if ($('#content').outerHeight() < $(window).height())
+          {
+            $('.blank').height($(window).height()-$('#content').outerHeight());
+          };
+        });
+        $(window).resize();
+      });
+      
+    </script>
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-50825266-2', 'programacion.net');
+	ga('require', 'displayfeatures');
+	ga('send', 'pageview');
+	</script>
+
+<script type="bfc105424b6e3333c75b3419-text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.programacion.net"]);
+  _paq.push(["setDomains", ["*.programacion.net","*.programacion.net"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.network/m/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '25']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://analytics.network/m/matomo.php?idsite=25&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="bfc105424b6e3333c75b3419-|49" defer=""></script></body>
+</html>
