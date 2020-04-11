@@ -149,14 +149,46 @@ table.cuerpo2 tfoot {
 	{
 		text-decoration: none;
 	}
-	
 
+	
+	/*
+	aside
+	{
+		width: 30%;
+		padding: 20px;
+		box-sizing: border-box;
+		background: ;
+		
+
+		
+	}
+
+	.main img
+	{
+		width: 70%;
+		background: #fff;
+		padding: 20px;
+		float: left;
+		box-sizing: border-box;		
+
+		
+	}*/
 	.basefor
+
 	{
 		margin: 0px auto;
-		width: 1100px;
+		width: 1200px;
+	/*	max-width: ;
+		box-sizing: border-box;	
+		*/
+
 	}
-	
+
+
+/***********************************************************************************************/
+/* margin: 0px auto;
+		width: 1100px;                                                                         */
+/*********************************************************************************************/
 
 /*********************************************************************************/
 /* Form Style                                                                    */
@@ -256,7 +288,7 @@ table.cuerpo2 tfoot {
 
 
 /*********************************************************************************/
-/* Image Style                                                                   */
+/* Image Estilos                                                                  */
 /*********************************************************************************/
 
 	.image
