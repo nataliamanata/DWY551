@@ -671,14 +671,14 @@ table.cuerpo2 tfoot {
 	{
 		float: left;
 		width: 270px;
-		padding: 0px 40px 0px 40px;
+		padding: 0px 1px 1px 80px;
 	}
 	
 	#footer .icon
 	{
 		display: block;
-		margin-bottom: 1em;
-		font-size: 3em;
+		margin-bottom: 0em;
+		font-size: 1em;
 	}
 
 	
