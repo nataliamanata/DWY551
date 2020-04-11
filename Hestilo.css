@@ -446,7 +446,7 @@ table.cuerpo2 tfoot {
 	#header1
 	{
 		text-align: center;
-		font-size: 0.80em;
+		font-size: 0.70em;
 	}
 	#header2
 	{
@@ -475,7 +475,7 @@ table.cuerpo2 tfoot {
 		display: block;
 		margin-bottom: 0.20em;
 		padding: 0.20em 0.9em;
-		font-size: 3.5em;
+		font-size: 3.4em;
 	}
 	
 	#logo a
@@ -652,7 +652,7 @@ table.cuerpo2 tfoot {
 	}
 
 /*********************************************************************************/
-/* Footer                                                                        */
+/* Footer   botones redes                                                        */
 /*********************************************************************************/
 
 	#footer
@@ -671,14 +671,14 @@ table.cuerpo2 tfoot {
 	{
 		float: left;
 		width: 270px;
-		padding: 0px 1px 1px 80px;
+		padding: 0px 1px 1px 100px;
 	}
 	
 	#footer .icon
 	{
 		display: block;
 		margin-bottom: 0em;
-		font-size: 1em;
+		font-size: 2em;
 	}
 
 	
